@@ -17,7 +17,7 @@ public class UploadTests extends TestUtilities {
         fileUploaderPage.openPage();
 
         // Select file
-        String fileName = "logo.png";
+         String fileName = "logo.png";
         fileUploaderPage.selectFile(fileName);
 
         // Push upload button

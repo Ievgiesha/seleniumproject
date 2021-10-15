@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.EditorPage;
-import com.herokuapp.theinternet.pages.WelcomePageObject;
+import com.herokuapp.theinternet.pages.WelcomePage;
 
 public class EditorTests extends TestUtilities {
 
@@ -14,9 +14,13 @@ public class EditorTests extends TestUtilities {
         log.info("Starting defaultEditorValueTest");
 
         // open main page
-        WelcomePageObject welcomePage = new WelcomePageObject(driver, log);
+        WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
-        sleep(2000);
+        sleep(5000);
+        //Scroll to the Buttom
+        welcomePage.scrollToBottom();
+        sleep(5000);
+
         // Click on WYSIWYG Editor link
         EditorPage editorPage = welcomePage.clickWYSIWYGEditorLink();
         sleep(2000);
